@@ -1,6 +1,6 @@
+import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
-import matplotlib.pyplot as plt
 
 # 페이지 기본 설정
 st.set_page_config(
