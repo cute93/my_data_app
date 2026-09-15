@@ -82,15 +82,10 @@ try:
     )
       # 일별 평균기온의 분포
   st.header("일별 평균기온은 어느 구간에 몰려 있나")
-  fig2 = px.histogram(df, x="평균기온", nbins=50)
+  fig2 = pd.histogram(df, x="평균기온", nbins=50)
   st.plotly_chart(fig2, width="stretch")
 except Exception as e:
   st.error(
       "데이터를 처리하는 동안 오류가 발생했습니다. 파일 구조를 확인해주세요."
   )
   st.error(f"상세 오류 내용: {e}")
-
-# 일별 평균기온의 분포
-st.header("일별 평균기온은 어느 구간에 몰려 있나")
-fig2 = px.histogram(df, x="평균기온", nbins=50)
-st.plotly_chart(fig2, width="stretch")
